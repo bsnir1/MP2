@@ -1,0 +1,26 @@
+{
+  "name": "CIS 531/731 ML Environment",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "args": {
+      "BASE_IMAGE": "${localEnv:DEVCONTAINER_GPU_IMAGE:-nvidia/cuda:12.1.1-runtime-ubuntu22.04}"
+    }
+  },
+  "remoteUser": "vscode",
+  "hostRequirements": {
+    "gpu": "optional"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  }
+}
