@@ -2,7 +2,7 @@
 # CIS 531/731: Minimal DevContainer Dockerfile (MP2)
 # ==============================================================================
 # Base image pinned for stability
-ARG BASE_IMAGE=python:3.10-slim-bookworm
+ARG BASE_IMAGE=pytorch/pytorch:2.2.1-cuda12.1-cudnn8-runtime
 
 # Pull conditionally based on the passed argument
 FROM ${BASE_IMAGE}
